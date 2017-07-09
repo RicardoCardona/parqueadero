@@ -1,0 +1,237 @@
+*,*:before,*:after{
+	font-family: Arial, sans;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ESTILOS  GENERALES */
+img{
+	display:block;
+	border-radius:5px;
+	margin:auto;
+	max-width:100%;
+}
+
+#cerrarSesion{
+	text-decoration: none;
+	color: black;
+}
+
+#parkingName{
+	float: right;
+	text-decoration: underline;
+}
+
+p{
+	margin-top:1rem;
+}
+
+.activo{
+	background-color: #D4D4D4;
+}
+
+.alerta{
+	display: inline-block;
+	padding: .75rem 2rem;
+	background-color: #F2B8B8;
+	cursor: pointer;
+	border-radius: 5px 5px 0 0;
+	box-shadow: inset -1px 1px 0px rgba(255,255,255,.3);
+}
+
+/* ESTILOS  PARA EL CONTENEDOR DE LAS PESTAÑAS */
+.content{
+	width: 99%;
+	margin: 1rem auto;
+	display: table;
+	position: relative;
+}
+
+/* ESTILOS  PARA LOS SECTIONS O PESTAÑAS */
+section{
+	width: 100%;
+	position: absolute;
+	padding: 1.5rem 1rem;
+	border-radius: 0 5px 5px 5px;
+	background-color: #f1f1f1;
+}
+
+article{
+	vertical-align: top;
+}
+
+.tab-uno{transition: opacity 1s ease; opacity:0;}
+.tab-dos{opacity:0;transition: opacity 1s ease;}
+.tab-tres{opacity:0;transition: opacity 1s ease;}
+.tab-cuatro{opacity:0;transition: opacity 1s ease;}
+.tab-cinco{opacity:0;transition: opacity 1s ease;}
+.tab-seis{opacity:0;transition: opacity 1s ease;}
+.tab-siete{opacity:0;transition: opacity 1s ease;}
+.tab-ocho{opacity:0;transition: opacity 1s ease;}
+
+input[type="radio"]{display:none;}
+
+
+/* ESTILOS  PARA LOS BOTONES O PESTAÑAS SUPERIORES */
+.tabs{
+	display: inline-block;
+	padding: .75rem 2rem;
+	color: white;
+	background-color: #dce758;
+	/*	background-color: #f9f9f9;*/
+	cursor: pointer;
+	border-radius: 5px 5px 0 0;
+	box-shadow: inset -1px 1px 0px rgba(255,255,255,.3);
+}
+
+.tabs:hover{
+    /*	background-color: #ddd;
+	color: #666;*/
+	background-color: #c2d014;
+	color: white;
+}
+
+
+/* ESTILOS  PARA MOSTRAR CADA PESTAÑA SEGÚN SU CHECKED */
+#tab1:checked ~ .tab-uno{opacity:1; z-index: 100;}
+#tab2:checked ~ .tab-dos{opacity:1; z-index: 100;}
+#tab3:checked ~ .tab-tres{opacity:1; z-index: 100;}
+#tab4:checked ~ .tab-cuatro{opacity:1; z-index: 100;}
+#tab5:checked ~ .tab-cinco{opacity:1; z-index: 100;}
+#tab6:checked ~ .tab-seis{opacity:1; z-index: 100;}
+#tab7:checked ~ .tab-siete{opacity:1; z-index: 100;}
+#tab8:checked ~ .tab-ocho{opacity:1; z-index: 100;}
+
+/*#tab1:checked ~ label[for="tab1"]{background-color:#f1f1f1;}*/
+#tab1:checked ~ label[for="tab1"]{background-color:#c2d014;}
+#tab2:checked ~ label[for="tab2"]{background-color:#c2d014;}
+#tab3:checked ~ label[for="tab3"]{background-color:#c2d014;}
+#tab4:checked ~ label[for="tab4"]{background-color:#c2d014;}
+#tab5:checked ~ label[for="tab5"]{background-color:#c2d014;}
+#tab6:checked ~ label[for="tab6"]{background-color:#c2d014;}
+#tab7:checked ~ label[for="tab7"]{background-color:#c2d014;}
+#tab8:checked ~ label[for="tab8"]{background-color:#c2d014;}
+
+
+/* ESTILOS  MEDIAQUERYS */
+@media all and (max-width:30rem) {
+	section{border-radius:0 0px 5px 5px;}	
+	.tabs{
+		display: block;
+		text-align: center;
+		border-radius: 0;
+		box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+	}
+	.alerta{
+		display: block;
+		text-align: center;
+		border-radius: 0;
+		box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+	}
+}
+
+.input {
+  height: 57px;
+  line-height: 46px;
+  font-size: 25px;
+}
+
+#reloj{
+	margin-top: 5px;
+	text-align: center;
+}
+
+#reloj ul li{
+	display: inline-block;
+	list-style: none;
+}
+
+#hours, #min{
+	font-size: 3.5em;
+	padding: 0 8px;
+	border-radius: 7%;
+	background: rgba(102,102,102,1);
+	background: -moz-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 54%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,102,102,1)), color-stop(54%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 54%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 54%, rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 54%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(102,102,102,1) 0%, rgba(0,0,0,1) 54%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000', GradientType=0 );
+	color: white;
+}
+
+#sec{
+	font-size: 3.5em;
+	padding: 0 8px;
+	border-radius: 7%;
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 9%, rgba(181,177,181,1) 53%, rgba(138,138,138,1) 97%, rgba(138,138,138,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(9%, rgba(226,226,226,1)), color-stop(53%, rgba(181,177,181,1)), color-stop(97%, rgba(138,138,138,1)), color-stop(100%, rgba(138,138,138,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 9%, rgba(181,177,181,1) 53%, rgba(138,138,138,1) 97%, rgba(138,138,138,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 9%, rgba(181,177,181,1) 53%, rgba(138,138,138,1) 97%, rgba(138,138,138,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 9%, rgba(181,177,181,1) 53%, rgba(138,138,138,1) 97%, rgba(138,138,138,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(226,226,226,1) 9%, rgba(181,177,181,1) 53%, rgba(138,138,138,1) 97%, rgba(138,138,138,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#8a8a8a', GradientType=0 );
+	color: black;
+}
+
+#point{
+	font-size: 3em;
+	color: black;
+}
+
+#Date{
+	font-size: 1.9em;
+	color: #8a8a8a;
+}
+#linea{
+	width: 0.1%;
+	display: inline-block;
+}
+#reservas{
+	width: 40%;
+	display: inline-block;
+	padding-right: 0;
+	/*margin-left: 2em;*/
+}
+#notificaciones{
+	width: 10%;
+	display: inline-block;
+}
+
+#scroll{
+	overflow-y:auto;
+	height:530px;
+	width:150px;"
+	float: right;
+}
+
+#resultadoNoti{
+	overflow: auto;
+}
+#notificacion{
+	width: 100%;
+	border: #585858 solid;
+	border-radius: 10%;
+	background: #F7FE2E;
+	padding-left: 1em;
+}
+
+/*Estilos para el formulario principal de acceso al sistema*/
+#formLogin{
+	width: 77%;
+	margin-top: 30%;
+	background: #F2F2F2;
+	padding: 4%;
+}
+
+#cambiarPassword{
+	text-align: center;
+	margin-left: 6em;
+}
+h5.espacio {
+    margin-top: 0;
+    height: 6;
+}
